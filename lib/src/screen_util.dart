@@ -67,9 +67,9 @@ class ScreenUtil {
         data: MediaQuery.of(context).copyWith(
             size: Size(
                 screenWidthDesign,
-                window.physicalSize.height /
-                    (window.physicalSize.width / screenWidthDesign)),
-            devicePixelRatio: window.physicalSize.width / screenWidthDesign),
+                MediaQuery.of(context).size.height /
+                    (MediaQuery.of(context).size.width / screenWidthDesign)),
+            devicePixelRatio: MediaQuery.of(context).size.width / screenWidthDesign),
         child: child);
   }
 
