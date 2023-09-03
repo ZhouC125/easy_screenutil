@@ -21,8 +21,9 @@ mixin ScreenGestureBinding on GestureBinding {
   void _handlePointerDataPacket(PointerDataPacket packet) {
     // We convert pointer data to logical pixels so that e.g. the touch slop can be
     // defined in a device-independent manner.
+    final FlutterView view = platformDispatcher.implicitView!;
     _pendingPointerEvents.addAll(PointerEventConverter.expand(
-        packet.data, window.physicalSize.width / ScreenUtil.screenWidthDesign));
+        packet.data, view.physicalSize.width / ScreenUtil.screenWidthDesign));
     if (!locked) _flushPointerEventQueue();
   }
 
