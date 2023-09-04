@@ -34,7 +34,7 @@ void main() {
 }
 ```
 
-* 2、 Initialize by  `ScreenUtil`.
+* 2、 init screen util  `ScreenUtil.builder`.
 
 ```dart
 @override
