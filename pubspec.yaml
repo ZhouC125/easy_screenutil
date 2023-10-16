@@ -1,6 +1,6 @@
 name: easy_screenutil
 description: A flutter plugin for adapting screen and font size.Let your UI display a reasonable layout on different screen sizes!
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ZhouC125/easy_screenutil.git
 
 environment:
