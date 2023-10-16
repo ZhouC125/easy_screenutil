@@ -23,7 +23,7 @@ mixin ScreenGestureBinding on GestureBinding {
     // defined in a device-independent manner.
     final FlutterView view = platformDispatcher.implicitView!;
     _pendingPointerEvents.addAll(PointerEventConverter.expand(
-        packet.data, view.physicalSize.width / ScreenUtil.screenWidthDesign));
+        packet.data, (int index )=>view.physicalSize.width / ScreenUtil.screenWidthDesign));
     if (!locked) _flushPointerEventQueue();
   }
 
